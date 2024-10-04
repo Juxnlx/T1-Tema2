@@ -36,12 +36,14 @@ public class Ejercicio5 {
 		System.out.print("Introduce el tercer número --> ");
 		num3 = sc.nextDouble();
 
-		if (num1 > num2 && num1 > num3) {
-			
-		} else if (num2 > num1 && num2 > num3) {
-			
-		} else if (num3 > num1 && num3 > num2) {
-			
+		if (num1 > num2) {
+			System.out.println(num2 + " < " + num1);
+			// Comprobamos si el num1 es menor que num2 y los imprimos en orden creciente.
+		} else if (num1 < num2) {
+			System.out.println(num1 + " < " + num2);
+			// Si los números son iguales se imprime que los números no son iguales.
+		} else {
+			System.out.println("Los números son iguales");
 		}
 	}
 
