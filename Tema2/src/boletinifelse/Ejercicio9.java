@@ -10,6 +10,15 @@ public class Ejercicio9 {
 
 	public static void main(String[] args) {
 
+		// Creamos la constante PIEDRA como string para almacenar el valor de Piedra.
+		final String PIEDRA = "Piedra";
+
+		// Creamos la constante PIEDRA como string para almacenar el valor de Piedra.
+		final String PAPEL = "Papel";
+
+		// Creamos la constante PIEDRA como string para almacenar el valor de Piedra.
+		final String TIJERA = "Tijera";
+
 		// Creamos la variable jugador1 como String para almacenar la opción introducido
 		// por el jugador 1.
 		String jugador1 = "";
@@ -34,26 +43,16 @@ public class Ejercicio9 {
 		// posibilidades que puede hacer. Y luego hacemos lo mismo con el jugador 2.
 		// También comprobamos con el else si hay empate, es decir, si los dos jugadores
 		// han elegido la misma opción.
-		if (jugador1.equalsIgnoreCase("piedra") && jugador2.equalsIgnoreCase("tijera")) {
+		if (jugador1.equalsIgnoreCase(jugador2)) {
+			System.out.println("¡EMPATE! --> Jugador 1: " + jugador1 + " y Jugador 2: " + jugador2);
+
+		} else if (jugador1.equalsIgnoreCase(PIEDRA) && jugador2.equalsIgnoreCase(TIJERA)
+				|| jugador1.equalsIgnoreCase(PAPEL) && jugador2.equalsIgnoreCase(PIEDRA)
+				|| jugador1.equalsIgnoreCase(TIJERA) && jugador2.equalsIgnoreCase(PAPEL)) {
 			System.out.println("Jugador 1: " + jugador1 + " - Jugador 2: " + jugador2 + " --> Ganador jugador 1.");
-
-		} else if (jugador1.equalsIgnoreCase("papel") && jugador2.equalsIgnoreCase("piedra")) {
-			System.out.println("Jugador 1: " + jugador1 + " - Jugador 2: " + jugador2 + " --> Ganador jugador 1.");
-
-		} else if (jugador1.equalsIgnoreCase("tijera") && jugador2.equalsIgnoreCase("papel")) {
-			System.out.println("Jugador 1: " + jugador1 + " - Jugador 2: " + jugador2 + " --> Ganador jugador 1.");
-
-		} else if (jugador2.equalsIgnoreCase("piedra") && jugador1.equalsIgnoreCase("tijera")) {
-			System.out.println("Jugador 1: " + jugador1 + " - Jugador 2: " + jugador2 + " --> Ganador jugador 2.");
-
-		} else if (jugador2.equalsIgnoreCase("papel") && jugador1.equalsIgnoreCase("piedra")) {
-			System.out.println("Jugador 1: " + jugador1 + " - Jugador 2: " + jugador2 + " --> Ganador jugador 2.");
-
-		} else if (jugador2.equalsIgnoreCase("tijera") && jugador1.equalsIgnoreCase("papel")) {
-			System.out.println("Jugador 1: " + jugador1 + " - Jugador 2: " + jugador2 + " --> Ganador jugador 2.");
 
 		} else {
-			System.out.println("¡EMPATE! --> Jugador 1: " + jugador1 + " y Jugador 2: " + jugador2);
+			System.out.println("Jugador 2: " + jugador2 + " - Jugador 1: " + jugador1 + " --> Ganador jugador 2.");
 		}
 
 		// Cierre de Scanner
