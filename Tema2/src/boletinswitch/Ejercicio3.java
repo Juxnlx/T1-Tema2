@@ -65,17 +65,32 @@ public class Ejercicio3 {
 			yield (numero1 * numero2);
 		}
 		case 'D' -> {
-			yield (numero1 / numero2);
+			// Comprobamos si el núemro es igual a 0 para evitar que se divida entre 0 ya
+			// que no se puede. Entonces hago que devuelva -2 y luego controlamos ese valor
+			// para que mustre un mensaje de error.
+			if (numero2 == 0) {
+				yield -2;
+				// Si el número es distinto de 0 se hace la división normal y corriente.
+			} else {
+				yield (numero1 / numero2);
+			}
+
 		}
 		default -> {
 			yield -1;
 		}
 		};
 
-		//En caso de que la solución sea -1 se muestra un mensaje de opción incorrecta.
+		// En caso de que la solución sea -1 se muestra un mensaje de opción incorrecta.
 		if (solucion == -1) {
 			System.out.println("Opción incorrecta");
-		//Si no se muestra la operación seleccionada por el usuario.
+
+			// En el caso de que la solución sea -2 mostramos el mensaje de que no se puede
+			// dividir entre 0.
+		} else if (solucion == -2) {
+			System.out.println("No se puede dividir entre 0");
+
+			// Si no se muestra la operación seleccionada por el usuario.
 		} else {
 			System.out.println("La solución de la operación es --> " + solucion);
 		}
