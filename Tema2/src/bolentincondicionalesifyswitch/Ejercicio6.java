@@ -35,13 +35,18 @@ public class Ejercicio6 {
 		// el usuario.
 		int horas;
 
+		// Creamos la variable solucion como String para almacenar el resultado de la
+		// hora con un segundo incrementado y le añadimos 0 si las horas, segundos y
+		// minutos son menor que 9.
+		String solucion = "";
+
 		// Creamos el Scanner para pedir las horas, minutos y segundos al usuario.
 		Scanner sc = new Scanner(System.in);
-		
+
 		// Le pedimos al usuario que introduzca las horas que deseé y las leemos.
 		System.out.print("Introduce una cantidad de horas --> ");
 		horas = sc.nextInt();
-		
+
 		// Le pedimos al usuario que introduzca los minutos que deseé y los leemos.
 		System.out.print("Introduce una cantidad de minutos --> ");
 		minutos = sc.nextInt();
@@ -80,25 +85,15 @@ public class Ejercicio6 {
 				horas = 0;
 			}
 
-			// Mediante if comprobamos si los segundos, minutos y horas son un número de 1
-			// cifra o 2 cifras y le añadimos un 0 delante o no.
-			if (segundos / 10 == 0 && minutos / 10 == 0 && horas / 10 == 0) {
-				System.out.println("Hora con 1 seg mas: 0" + horas + ":0" + minutos + ":0" + segundos);
-			} else if (segundos / 10 == 0 && minutos / 10 == 0) {
-				System.out.println("Hora con 1 seg mas: " + horas + ":0" + minutos + ":0" + segundos);
-			} else if (segundos / 10 == 0 && horas / 10 == 0) {
-				System.out.println("Hora con 1 seg mas: 0" + horas + ":" + minutos + ":0" + segundos);
-			} else if (minutos / 10 == 0 && horas / 10 == 0) {
-				System.out.println("Hora con 1 seg mas: 0" + horas + ":0" + minutos + ":" + segundos);
-			} else if (segundos / 10 == 0) {
-				System.out.println("Hora con 1 seg mas: " + horas + ":" + minutos + ":0" + segundos);
-			} else if (minutos / 10 == 0) {
-				System.out.println("Hora con 1 seg mas: " + horas + ":0" + minutos + ":" + segundos);
-			} else if (horas / 10 == 0) {
-				System.out.println("Hora con 1 seg mas: " + "0" + horas + ":" + minutos + ":0" + segundos);
-			} else {
-				System.out.println("Hora con 1 seg mas: " + horas + ":" + minutos + ":0" + segundos);
-			}
+			// Hacemos un ternario y a nuestra solución le concatenamos un 0 delante si las
+			// horas, minutos y segundos son menor 10, si no una cadena vacia luego las
+			// horas y dos puntitos.
+			solucion += (horas < 10 ? "0" : "") + horas + ":";
+			solucion += (minutos < 10 ? "0" : "") + minutos + ":";
+			solucion += (segundos < 10 ? "0" : "") + segundos;
+
+			//Imprimimos la nuestra hora 
+			System.out.println(solucion);
 		}
 
 		// Cierre de Scanner;
