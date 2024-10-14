@@ -37,18 +37,18 @@ public class Ejercicio6 {
 
 		// Creamos el Scanner para pedir las horas, minutos y segundos al usuario.
 		Scanner sc = new Scanner(System.in);
-
-		// Le pedimos al usuario que introduzca los segundos que deseé y los leemos.
-		System.out.print("Introduce una cantidad de segundos --> ");
-		segundos = sc.nextInt();
-
+		
+		// Le pedimos al usuario que introduzca las horas que deseé y las leemos.
+		System.out.print("Introduce una cantidad de horas --> ");
+		horas = sc.nextInt();
+		
 		// Le pedimos al usuario que introduzca los minutos que deseé y los leemos.
 		System.out.print("Introduce una cantidad de minutos --> ");
 		minutos = sc.nextInt();
 
-		// Le pedimos al usuario que introduzca las horas que deseé y las leemos.
-		System.out.print("Introduce una cantidad de horas --> ");
-		horas = sc.nextInt();
+		// Le pedimos al usuario que introduzca los segundos que deseé y los leemos.
+		System.out.print("Introduce una cantidad de segundos --> ");
+		segundos = sc.nextInt();
 
 		// Comprobamos si las horas, minutos y segundos introducidos por el usuario son
 		// incorrectos. En el caso de los segundos el valor -1 y 60 serian incorrectos.
