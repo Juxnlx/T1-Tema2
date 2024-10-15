@@ -48,6 +48,7 @@ public class Ejercicio3 {
 
 		// Mostramos el resultado de la media de todos los números introducidos.
 		System.out.println("La media de estos números es: " + (float) resultSuma / contador);
+		System.out.println(contador);
 
 		// Cierre de Scanner
 		sc.close();

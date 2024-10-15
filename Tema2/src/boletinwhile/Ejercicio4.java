@@ -15,9 +15,8 @@ public class Ejercicio4 {
 		int num;
 
 		// Creamos la variable cont como int para contabilizar cuantos números esta
-		// introduciendo el usuario. Y declaramos nuestra variable a 1 porque nada mas
-		// entrar en el bucle se le pide un número al usuario.
-		int cont = 1;
+		// introduciendo el usuario. Y declaramos nuestra variable a 0.
+		int cont = 0;
 
 		// Creamos la variable resultSuma como int para almacenar la suma de todos los
 		// números positivos introducidos por el usuario.
@@ -40,14 +39,14 @@ public class Ejercicio4 {
 
 		// Creamos el while con la condición de que nuestro cont debe de ser menor o
 		// igual a 10 para solo pedir al usuario 10 números.
-		while (cont <= 10) {
-
+		while (cont < 10) {
+			
+			// Incrementamos nuestro contador de números introducidos por el usuario en 1.
+			cont++;
+			
 			// Le pedimos al usuario que introduzca un número y lo leemos por teclado.
 			System.out.println("Introduce un número --> ");
 			num = sc.nextInt();
-
-			// Incrementamos nuestro contador de números introducidos por el usuario en 1.
-			cont++;
 
 			// Comprobamos si el número es positivo, si es así, sumamos los números
 			// positivos y los almacenamos en resultSuma.
@@ -57,7 +56,7 @@ public class Ejercicio4 {
 				// contabilizamos los números negativos introducidos para luego mostrar la
 				// media.
 			} else if (num < 0) {
-				resultResta -= num;
+				resultResta += num;
 				contResta++;
 				// Y por ultimo este else controla las veces que se introduce 0 y lo contabiliza
 				// y almacena ese núemro de veces en cantCeros.
@@ -70,10 +69,10 @@ public class Ejercicio4 {
 		// veces que hemos introducido ceros.
 		System.out.println();
 		System.out.println("Total suma números positivos --> " + resultSuma);
-		System.out.println("Media de número negativos --> " + (float) resultResta/contResta);
+		System.out.println("Media de número negativos --> " + (contResta == 0 ? 0 : (float) resultResta / contResta));
 		System.out.println("Número de ceros introducidos --> " + contCeros);
 
-		//Cierre de Scanner
+		// Cierre de Scanner
 		sc.close();
 	}
 
