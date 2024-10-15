@@ -3,7 +3,7 @@ package boletinwhile;
 import java.util.Scanner;
 
 /**
- * Este programa le pide al usuario números y va contanvilizando cuantas veces a
+ * Este programa le pide al usuario números y va contabilizando cuantas veces a
  * insertado un número y te devuelve la cantidad de números introducidos cuando
  * introduces un número negativo.
  */

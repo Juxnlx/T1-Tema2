@@ -59,7 +59,7 @@ public class Ejercicio4 {
 				resultResta += num;
 				contResta++;
 				// Y por ultimo este else controla las veces que se introduce 0 y lo contabiliza
-				// y almacena ese núemro de veces en cantCeros.
+				// y almacena ese número de veces en cantCeros.
 			} else {
 				contCeros++;
 			}

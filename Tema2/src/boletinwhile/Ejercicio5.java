@@ -29,7 +29,7 @@ public class Ejercicio5 {
 		// Creamos el Scanner para leer las edades del alumno.
 		Scanner sc = new Scanner(System.in);
 
-		// Le pedimos al usuario que introduzca la edad del elumno y la leemos.
+		// Le pedimos al usuario que introduzca la edad del alumno y la leemos.
 		System.out.print("Introduce la edad del alumno --> ");
 		edad = sc.nextInt();
 

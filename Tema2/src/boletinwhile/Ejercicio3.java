@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Este programa pedira números al usuario el programa debe de sumarlos y
- * finalmente mostrara la media de esos núemros. El programa termina cuando el
+ * finalmente mostrara la media de esos números. El programa termina cuando el
  * usuario introduce un número negativo.
  */
 public class Ejercicio3 {
@@ -48,7 +48,6 @@ public class Ejercicio3 {
 
 		// Mostramos el resultado de la media de todos los números introducidos.
 		System.out.println("La media de estos números es: " + (float) resultSuma / contador);
-		System.out.println(contador);
 
 		// Cierre de Scanner
 		sc.close();

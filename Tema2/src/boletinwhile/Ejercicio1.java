@@ -39,10 +39,10 @@ public class Ejercicio1 {
 			num = sc.nextInt();
 		}
 
-		// Mostramos el resultado de la suma de todos los números introducidos
+		// Mostramos el resultado de la suma de todos los números introducidos.
 		System.out.println("La suma total es de: " + resultSuma);
 
-		// Cierre de Scanner
+		// Cierre de Scanner.
 		sc.close();
 	}
 
