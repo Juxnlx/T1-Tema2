@@ -28,7 +28,7 @@ public class Ejercicio1 {
 
 		// Creamos nuestro while para sumar los número positivos introducidos por el
 		// usuario.
-		while (num > 0) {
+		while (num >= 0) {
 
 			// Con esta condición vamos sumando los número positivos introducidos y lo
 			// almacenamos en resultSuma.

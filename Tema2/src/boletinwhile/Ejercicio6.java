@@ -12,7 +12,7 @@ public class Ejercicio6 {
 
 		// Creamos la variable medidaArbol como int para almacenar la altura de los
 		// arboles introducidos por el usuario.
-		int medidaArbol = 0;
+		int medidaArbol;
 
 		// Creamos la variable arbolmayor como int para almacenar la altura del arbol
 		// mas alto.
@@ -21,13 +21,13 @@ public class Ejercicio6 {
 		// Creamos el Scanner para leer las medidas de cada arbol.
 		Scanner sc = new Scanner(System.in);
 
+		// Le preguntamos al usuario que introduzca la medidida del arbol y la leemos.
+		System.out.print("Introduce la altura del arbol en cm --> ");
+		medidaArbol = sc.nextInt();
+
 		// Creamos el while con la siguiente condición, si mediaArbol es distinto a -1,
 		// no pasa.
 		while (medidaArbol != -1) {
-
-			// Le preguntamos al usuario que introduzca la medidida del arbol y la leemos.
-			System.out.print("Introduce la altura del arbol en cm --> ");
-			medidaArbol = sc.nextInt();
 
 			// Comprobamos si la altura mas alta registrada es mas pequeña que la nueva
 			// medida, si es así entonces a la altura mas alta se le asigna la nueva media
@@ -35,6 +35,10 @@ public class Ejercicio6 {
 			if (arbolMayor <= medidaArbol) {
 				arbolMayor = medidaArbol;
 			}
+			
+			// Le preguntamos al usuario que introduzca la medidida del arbol y la leemos.
+			System.out.print("Introduce la altura del arbol en cm --> ");
+			medidaArbol = sc.nextInt();
 		}
 
 		// Comprobamos si la altura mas alta del arbol es 0 entonces el arbol no existe.

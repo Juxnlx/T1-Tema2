@@ -15,8 +15,8 @@ public class Ejercicio4 {
 		int num;
 
 		// Creamos la variable cont como int para contabilizar cuantos números esta
-		// introduciendo el usuario. Y declaramos nuestra variable a 0.
-		int cont = 0;
+		// introduciendo el usuario. Y declaramos nuestra variable a 1.
+		int cont = 1;
 
 		// Creamos la variable resultSuma como int para almacenar la suma de todos los
 		// números positivos introducidos por el usuario.
@@ -39,11 +39,8 @@ public class Ejercicio4 {
 
 		// Creamos el while con la condición de que nuestro cont debe de ser menor o
 		// igual a 10 para solo pedir al usuario 10 números.
-		while (cont < 10) {
-			
-			// Incrementamos nuestro contador de números introducidos por el usuario en 1.
-			cont++;
-			
+		while (cont <= 10) {
+
 			// Le pedimos al usuario que introduzca un número y lo leemos por teclado.
 			System.out.println("Introduce un número --> ");
 			num = sc.nextInt();
@@ -63,13 +60,17 @@ public class Ejercicio4 {
 			} else {
 				contCeros++;
 			}
+
+			// Incrementamos nuestro contador de números introducidos por el usuario en 1.
+			cont++;
 		}
 
 		// Imprimimos la suma de los números positivos, la media de los negativos y las
 		// veces que hemos introducido ceros.
 		System.out.println();
 		System.out.println("Total suma números positivos --> " + resultSuma);
-		System.out.println("Media de número negativos --> " + (contResta == 0 ? 0 : (float) resultResta / contResta));
+		System.out.println(contResta == 0 ? "No se ha introducido ningun número negativo"
+				: "La media de los números negativos es de: " + (float) resultResta / contResta);
 		System.out.println("Número de ceros introducidos --> " + contCeros);
 
 		// Cierre de Scanner
