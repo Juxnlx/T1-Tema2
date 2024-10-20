@@ -6,7 +6,7 @@ public class Ejercicio2 {
 	public static void main(String[] args) {
 
 		// Creamos la variable num como int para ir almacenando e imprimiendo números.
-		// La inicializamos en 2 porque es el primer núemro par.
+		// La inicializamos en 2 porque es el primer número par.
 		int num = 2;
 
 		// Mensaje imprimiendo la lista de números pares hasta el 200.

@@ -10,11 +10,11 @@ public class Ejercicio3 {
 
 	public static void main(String[] args) {
 
-		// Creamos la variable num como int que sera el número introducido por e usuario
+		// Creamos la variable num como int que sera el número introducido por el usuario
 		// y hasta donde hay que sumar.
 		int numUsuario;
 
-		// Creamos la variable num como int para ir alamacenando los número que se van
+		// Creamos la variable num como int para ir almacenando los número que se van
 		// sumando hasta llegar al número introducido por el usuario. Lo incrementamos
 		// en 1 porque la suma va a empezar en 1.
 		int num = 1;

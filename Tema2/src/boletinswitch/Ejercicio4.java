@@ -25,12 +25,12 @@ public class Ejercicio4 {
 		// Creamos el Scanner para pedir el valor de cada tirada al usuario por teclado.
 		Scanner sc = new Scanner(System.in);
 
-		// Le pedimos al usuario que introduzca el valor de de la primera tirada en
+		// Le pedimos al usuario que introduzca el valor de la primera tirada en
 		// cadena.
 		System.out.print("Resultado de la primera tirada --> ");
 		tirada1 = sc.nextLine();
 
-		// Le pedimos al usuario que introduzca el valor de de la segunda tirada en
+		// Le pedimos al usuario que introduzca el valor de la segunda tirada en
 		// cadena.
 		System.out.print("Resultado de la segunda tirada --> ");
 		tirada2 = sc.nextLine();
