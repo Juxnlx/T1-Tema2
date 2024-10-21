@@ -48,8 +48,8 @@ public class Ejercicio6 {
 				// Comprobamos si la opción introducida por el jugador 1 es distinta a papel,
 				// piedra y tijera, si es así debe de volver a preguntar hasta introducir una
 				// opción valida.
-			} while (!jugador1.equalsIgnoreCase("papel") && !jugador1.equalsIgnoreCase("piedra")
-					&& !jugador1.equalsIgnoreCase("tijera"));
+			} while (!jugador1.equalsIgnoreCase(PIEDRA) && !jugador1.equalsIgnoreCase(PAPEL)
+					&& !jugador1.equalsIgnoreCase(TIJERA));
 
 			// Creamos un bucle do-while para comprobar si la opción introducida por el
 			// jugador 2 es valida.
@@ -60,8 +60,8 @@ public class Ejercicio6 {
 				// Comprobamos si la opción introducida por el jugador 2 es distinta a papel,
 				// piedra y tijera, si es así debe de volver a preguntar hasta introducir una
 				// opción valida.
-			} while (!jugador2.equalsIgnoreCase("papel") && !jugador2.equalsIgnoreCase("piedra")
-					&& !jugador2.equalsIgnoreCase("tijera"));
+			} while (!jugador2.equalsIgnoreCase(PIEDRA) && !jugador2.equalsIgnoreCase(PAPEL)
+					&& !jugador2.equalsIgnoreCase(TIJERA));
 
 			// Comprobamos mediante if y else-if cuando el jugador 1 gana con las 2
 			// posibilidades que puede hacer. Y luego hacemos lo mismo con el jugador 2.

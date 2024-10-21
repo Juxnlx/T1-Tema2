@@ -37,8 +37,9 @@ public class Ejercicio8 {
 			// Comprobamos si la tirada 1 introducida por el usuario es distinta a todos
 			// estos números, si es así se vuelve a preguntar al usuario hasta que
 			// introduzca una opción valida.
-		} while (!tirada1.equals("UNO") && !tirada1.equals("DOS") && !tirada1.equals("TRES")
-				&& !tirada1.equals("CUATRO") && !tirada1.equals("CINCO") && !tirada1.equals("SEIS"));
+		} while (!tirada1.equalsIgnoreCase("uno") && !tirada1.equalsIgnoreCase("dos")
+				&& !tirada1.equalsIgnoreCase("tres") && !tirada1.equalsIgnoreCase("cuatro")
+				&& !tirada1.equalsIgnoreCase("cinco") && !tirada1.equalsIgnoreCase("seis"));
 
 		// Creamos el bucle do-while para controlar que la tirada 2 introducida por el
 		// usuario sea correcta.
@@ -51,12 +52,13 @@ public class Ejercicio8 {
 			// Comprobamos si la tirada 2 introducida por el usuario es distinta a todos
 			// estos números, si es así se vuelve a preguntar al usuario hasta que
 			// introduzca una opción valida.
-		} while (!tirada2.equals("UNO") && !tirada2.equals("DOS") && !tirada2.equals("TRES")
-				&& !tirada2.equals("CUATRO") && !tirada2.equals("CINCO") && !tirada2.equals("SEIS"));
+		} while (!tirada2.equalsIgnoreCase("uno") && !tirada2.equalsIgnoreCase("dos")
+				&& !tirada2.equalsIgnoreCase("tres") && !tirada2.equalsIgnoreCase("cuatro")
+				&& !tirada2.equalsIgnoreCase("cinco") && !tirada2.equalsIgnoreCase("seis"));
 
 		// A la solución le asignamos el valor devuelto de la tirada 1 dependiendo de la
 		// tirada introducida por el usuario.
-		solucion = switch (tirada1) {
+		solucion = switch (tirada1.toUpperCase()) {
 		case "UNO" -> {
 			yield 1;
 		}
@@ -82,7 +84,7 @@ public class Ejercicio8 {
 
 		// A la solución le concatenamos el valor devuelto de la tirada 2 dependiendo de
 		// la tirada introducida por el usuario.
-		solucion += switch (tirada2) {
+		solucion += switch (tirada2.toUpperCase()) {
 		case "UNO" -> {
 			yield 1;
 		}
