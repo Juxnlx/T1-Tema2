@@ -17,7 +17,7 @@ public class Ejercicio1 {
 		// Creamos el Scanner para leer el número introducido por el usuario por teclado
 		Scanner sc = new Scanner(System.in);
 
-		// Le pedimos al uasuario que introduzca un número y lo leemos
+		// Le pedimos al usuario que introduzca un número y lo leemos
 		System.out.print("Introduce el número hasta donde quieres contar --> ");
 		numFinal = sc.nextInt();
 
