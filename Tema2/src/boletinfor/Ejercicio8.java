@@ -18,6 +18,12 @@ public class Ejercicio8 {
 		// por el usuario.
 		int numB;
 
+		// Creamos la variable principio como int para almacenar el número menor.
+		int principio;
+
+		// Creamos la variable principio como int para almacenar el número menor.
+		int fin;
+
 		// Creamos el Scanner para leer A y B del usuario.
 		Scanner sc = new Scanner(System.in);
 
@@ -29,30 +35,24 @@ public class Ejercicio8 {
 		System.out.print("Introduce el valor de B --> ");
 		numB = sc.nextInt();
 
-		// Comprobamos si A es menor que B, si es así, mediante un for mostramos los
-		// números desde A haste B.
+		// Comprobamos si A es menor que B, si es así le asignamos a principio nuestro
+		// número A, y a fin el número B-
 		if (numA < numB) {
-			System.out.print("Números entre A y B : ");
-			// La variable del for la inicializamos en el número menor en este caso A y
-			// vamos imprimiendo los números hasta B y el incremento de 1 en 1.
-			for (int i = numA; i <= numB; i++) {
-				System.out.print(i + ", ");
-			}
-
-			// Comprobamos si B es menor que A, si es así, mediante un for mostramos los
-			// números desde B haste A.
-		} else if (numB < numA) {
-			System.out.print("Números entre B y A : ");
-			// La variable del for la inicializamos en el número menor en este caso B y
-			// vamos imprimiendo los números hasta A y el incremento de 1 en 1.
-			for (int i = numB; i <= numA; i++) {
-				System.out.print(i + ", ");
-			}
-
-			// Si no se cumple ninguna de las condiciones anteriores, los números son
-			// iguales.
+			principio = numA;
+			fin = numB;
+			// Si no asignamos a principio y a fin lo contrario a lo anterior.
 		} else {
-			System.out.println("Los números introducidos son iguales ");
+			principio = numB;
+			fin = numA;
+		}
+
+		// Imprimimos un mensaje de lo que vamos a mostrar a continuación.
+		System.out.print("Números entre " + principio + " y " + fin + ": ");
+		// La variable del for la inicializamos en el número menor que se encuentra
+		// guardada en la variable principio y vamos imprimiendo los números hasta el
+		// mayor que se encuentra en fin y el incremento de 1 en 1 y vamos imprimiendo.
+		for (int i = principio; i <= fin; i++) {
+			System.out.print(i + ", ");
 		}
 
 		// Cierre de Scanner
