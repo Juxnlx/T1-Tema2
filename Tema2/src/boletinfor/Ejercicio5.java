@@ -27,11 +27,16 @@ public class Ejercicio5 {
 		System.out.print("Introduce el número del que desea conocer su factorial --> ");
 		num = sc.nextInt();
 
+		// Imprimimos que es lo que vamos a mostrar por consola.
+		System.out.println();
+		System.out.println("El factorial del número " + num + " es: ");
+
 		// Con este for asignamos a nuestra variable i el número introducido por el
-		// usuario. La condición seria que el números debe de ser mayor o igual 1 y con
+		// usuario. La condición seria que el números debe de ser mayor o igual 2 y con
 		// el decremento lo que vamos haciendo es coger los números mas pequeños de 1 en
-		// 1 hasta el 1.
-		for (int i = num; i >= 1; i--) {
+		// 1 hasta el 2, ya que multiplicar por 1 es igual.
+		for (int i = num; i >= 2; i--) {
+			System.out.print(i + " x ");
 			// En cada iteración vamos multiplicando el número introducido y lo vamos
 			// almacenando en nuesta variable resultFactorial.
 			resultFactorial *= i;
@@ -39,10 +44,9 @@ public class Ejercicio5 {
 
 		// Imprimimos un mensaje mostrando el factorial del número introducido por el
 		// usuario.
-		System.out.println();
-		System.out.println("El factorial del número " + num + " es: " + resultFactorial);
-		
-		//Cierre de Scanner 
+		System.out.print("1 = " + resultFactorial);
+
+		// Cierre de Scanner
 		sc.close();
 	}
 
