@@ -22,9 +22,13 @@ public class Ejercicio7 {
 		// Creamos el Scanner para leer el número introducido por el usuario.
 		Scanner sc = new Scanner(System.in);
 
-		// Le pedimos al usuario que introduzca un número y lo leemos.
-		System.out.print("Introduce un número --> ");
-		num = sc.nextInt();
+		// Creamos un do-while para que siempre que el número que introduzcamos sea
+		// menor o igual a 0, nos vuelva a pedir un número.
+		do {
+			// Le pedimos al usuario que introduzca un número y lo leemos.
+			System.out.print("Introduce un número --> ");
+			num = sc.nextInt();
+		} while (num <= 0);
 
 		// Con este bucle for controlamos las 10 prmeras interaciones impares.
 		// Inicializamos nuestra variable en 2 porque debemos de empezar a comprobar en
@@ -42,9 +46,14 @@ public class Ejercicio7 {
 			}
 		}
 
-		// Comprobamos si se devuelve true, si es así es primo.
-		if (solucion) {
+		// Comprobamos si el número es igual a 1
+		if (num == 1) {
+			System.out.println("El " + num + " no es primo ");
+
+			// Comprobamos si se devuelve true, si es así es primo.
+		} else if (solucion) {
 			System.out.println("El " + num + " es primo ");
+
 			// Si no, no es primo.
 		} else {
 			System.out.println("El " + num + " no es primo ");
