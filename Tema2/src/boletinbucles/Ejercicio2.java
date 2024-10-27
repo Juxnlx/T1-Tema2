@@ -25,16 +25,15 @@ public class Ejercicio2 {
 		System.out.print("Introduce un número --> ");
 		num = sc.nextInt();
 
-		for (int i = 1; i<num; i++) {
+		for (int i = 1; i < num; i++) {
 			
-			for (int j = 2; i < j; j++) {
-				
-				if (i%j == 0) {
-					numPrimos++;
+			for (int j = 2; j < i; j++) {
+				if (i % j != 0) {
+				numPrimos++;
 				}
 			}
 		}
-		
+
 		System.out.println(numPrimos);
 	}
 
