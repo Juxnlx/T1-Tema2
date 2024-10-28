@@ -18,9 +18,9 @@ public class Ejercicio3 {
 		// introducido por el usuario.
 		int num2;
 
-		// Creamos la variable numMay como int para alamcenar cual de los dos números
+		// Creamos la variable numMay como int para almacenar cual de los dos números
 		// introducidos por el usuario en mayor.
-		int numMay;
+		int numMen;
 
 		// Creamos la variable maxD como int para alamcenar el M.C.D de estos dos
 		// números.
@@ -37,16 +37,18 @@ public class Ejercicio3 {
 		System.out.print("Introduce el segundo número --> ");
 		num2 = sc.nextInt();
 
-		if (num1 <= num2) {
-			numMay = num2;
+		if (num1 >= num2) {
+			numMen = num2;
 		} else {
-			numMay = num1;
+			numMen = num1;
 		}
 
-		for (int i = 2; numMay >= 0; i--) {
-
+		for (int i = numMen; i >= 1; i--) {
+			if ((num1%i == 0) && (num2%i == 0)) {
+				System.out.println(i);
+				break;
+			}
 		}
-
 	}
 
 }
