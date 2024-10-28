@@ -17,7 +17,7 @@ public class Ejercicio7 {
 		Scanner sc = new Scanner(System.in);
 
 		// Le pedimos al usuario que introduzca un número y lo leemos por teclado
-		System.out.print("Introduce una letra --> ");
+		System.out.print("Introduce un número --> ");
 		num = sc.nextInt();
 
 		// Este for hace que las número de filas sean las introducidas por el usuario.
