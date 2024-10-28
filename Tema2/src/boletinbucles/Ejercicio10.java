@@ -59,6 +59,8 @@ public class Ejercicio10 {
 			
 		
 		System.out.println(esCapicua);
+		
+		sc.close();
 	}
 
 }
