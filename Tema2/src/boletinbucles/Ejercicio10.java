@@ -1,5 +1,6 @@
 package boletinbucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -27,7 +28,7 @@ public class Ejercicio10 {
 
 		// Creamos la variable num como int para almacenar el número introducido por el
 		// usuario.
-		int num;
+		int num = 0;
 
 		// Creamos la variable numCopia como int para almacenar una copia una copia del
 		// número introducido por el usuario, para no modificar la introducida por el
@@ -46,22 +47,59 @@ public class Ejercicio10 {
 		// número.
 		int finalCifraNum = 0;
 
+		// Creamos la variable exception como boolean para almacenar true o false,
+		// dependiendo de si el valor de entrada es verdadero o falso.
+		boolean exception;
+
 		// Creamos el Scanner para leer el número introducido por el usuario.
 		Scanner sc = new Scanner(System.in);
 
-		// Le pedimos al usuario que introduzca el número y lo leemos por primera vez.
-		System.out.println("Introduce un número --> ");
-		num = sc.nextInt();
+		// Creamos un bucle do-while para volver a preguntar el número hasta introducir
+		// un valor correcto.
+		do {
 
-		// Creamos un bucle while para comprobar si el número introducido por el usuario
-		// es menor o igual que 0.
-		while (num < 0) {
-			// Mostramos un mensaje de que el número introducido no es valido.
-			System.out.println("Lo siento el número introducido no es valido");
-			// Le pedimos al usuario que introduzca el número y lo leemos
-			System.out.println("Introduce un número --> ");
-			num = sc.nextInt();
-		}
+			// Creamos nuestro bloque try con las instrucciones sensibles a algun tipo de
+			// excepción, en nuestro caso con el número de valor de entrada.
+			try {
+				// Le pedimos al usuario que introduzca un número por teclado y lo leemos.
+				System.out.print("Dime un número inicial: ");
+				num = sc.nextInt();
+
+				// Creamos el assert y en caso de que sea false nos devuelve el mensaje de que
+				// el número es negativo y se va directamente a la exceptción especifica
+				// que le haya saltado. Salta cuando los números son menores que 0.
+				assert (num >= 0) : "El número introducido es negativo";
+
+				// Solo se ejecuta si el dato es correcto para salirnos del bucle.
+				exception = false;
+
+				// Este catch captura las excepciones si nosotros introducimos un valor númerico
+				// menor que cero.
+			} catch (AssertionError e) {
+				// Imprimimos el mensaje del assert.
+				System.out.println(e.getMessage());
+
+				// Ponemos la exception a true para volver a preguntar el número.
+				exception = true;
+
+				// Este catch captura las excepciones si nosotros introducimos una cadena.
+			} catch (InputMismatchException e) {
+				System.out.println("El valor introducido es erroneo");
+
+				// Ponemos la exception a true para volver a preguntar el número.
+				exception = true;
+
+				// Creamos el bloque finally para que siempre se ejecute independientemente de
+				// si salta una excepción o no.
+			} finally {
+
+				// Limpiamos el buffer.
+				sc.nextLine();
+			}
+
+			// Comprobamos si la exception es false o true para volver a preguntar el número
+			// o no
+		} while (exception);
 
 		// El primer paso es asignar a la variable nunCopia el valor del número para no
 		// modificar el valor introducido por el usuario.
