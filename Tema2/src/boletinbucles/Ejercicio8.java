@@ -63,7 +63,7 @@ public class Ejercicio8 {
 				exception = false;
 
 				// Este catch captura las excepciones si nosotros introducimos un valor númerico
-				// menor que dos.
+				// menor que cero.
 			} catch (AssertionError e) {
 				// Imprimimos el mensaje del assert.
 				System.out.println(e.getMessage());
