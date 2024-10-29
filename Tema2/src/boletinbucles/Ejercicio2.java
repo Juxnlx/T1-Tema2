@@ -35,6 +35,8 @@ public class Ejercicio2 {
 		System.out.print("Introduce un número --> ");
 		num = sc.nextInt();
 
+		// Comprobamos si el número introducido por el usuario es menor que 1, si es así
+		// mostramos un mensaje de error y volvemos a preguntar el número.
 		while (num < 1) {
 			System.out.println("El número introducido es menor que 1");
 			System.out.print("Introduce un número --> ");
