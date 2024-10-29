@@ -35,6 +35,8 @@ public class Ejercicio4 {
 		System.out.print("Introduce el primer número --> ");
 		num1 = sc.nextInt();
 
+		// Comprobamos que el número 1 sea menor que 2, si es asi mostramos un mensaje
+		// de error y volvemos a preguntar el número 1.
 		while (num1 < 2) {
 			System.out.println("El número introducido es menor que 2");
 			System.out.print("Introduce el primer número --> ");
@@ -45,6 +47,8 @@ public class Ejercicio4 {
 		System.out.print("Introduce el segundo número --> ");
 		num2 = sc.nextInt();
 
+		// Comprobamos que el número 2 sea menor que 2, si es asi mostramos un mensaje
+		// de error y volvemos a preguntar el número 2.
 		while (num2 < 2) {
 			System.out.println("El número introducido es menor que 2");
 			System.out.print("Introduce el segundo número --> ");
