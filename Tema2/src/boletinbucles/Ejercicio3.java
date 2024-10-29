@@ -6,6 +6,12 @@ import java.util.Scanner;
  * Este programa calcula el maximo comun divisor entre dos números que se le
  * solicitarán al usuario.
  */
+
+//PRUEBAS
+//ENTRADA: 1, 1 || RESULTADO ESPERADO: 1 || RESULTADO OBTENIDO: 1
+//ENTRADA: 100, 125 || RESULTADO ESPERADO: 25 || RESULTADO OBTENIDO: 25
+//ENTRADA: 200, 340 || RESULTADO ESPERADO: 20 || RESULTADO OBTENIDO: 20
+//ENTRADA: 80, 75 || RESULTADO ESPERADO: 5 || RESULTADO OBTENIDO: 5
 public class Ejercicio3 {
 
 	public static void main(String[] args) {
@@ -28,10 +34,22 @@ public class Ejercicio3 {
 		// Le pedimos al usuario que introduzca el primer número y lo leemos.
 		System.out.print("Introduce el primer número --> ");
 		num1 = sc.nextInt();
+		
+		while (num1 < 1) {
+			System.out.println("El número introducido es menor que 1");
+			System.out.print("Introduce el primer número --> ");
+			num1 = sc.nextInt();
+		}
 
 		// Le pedimos al usuario que introduzca el segundo número y lo leemos.
 		System.out.print("Introduce el segundo número --> ");
 		num2 = sc.nextInt();
+		
+		while (num2 < 1) {
+			System.out.println("El número introducido es menor que 1");
+			System.out.print("Introduce el segundo número --> ");
+			num2 = sc.nextInt();
+		}
 
 		// Comprobamos si el numero 1 es mayor igual que el número 2, si es así el
 		// número menor es el número 2.
