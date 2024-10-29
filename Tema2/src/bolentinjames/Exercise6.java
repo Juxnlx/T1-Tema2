@@ -76,6 +76,11 @@ public class Exercise6 {
 				}
 			}
 		}
-		//System.out.println(twoEuro + "monedas de dos euros" + euro + "monedas de un euro" + fiftyCents + "monedas de 50 céntimos" + twentyCents + "monedas de 20 céntimos" + tenCents + "monedas de 10 céntimos" + fiveCents + "monedas");
+		// System.out.println(twoEuro + "monedas de dos euros" + euro + "monedas de un
+		// euro" + fiftyCents + "monedas de 50 céntimos" + twentyCents + "monedas de 20
+		// céntimos" + tenCents + "monedas de 10 céntimos" + fiveCents + "monedas");
+
+		sc.close();
+
 	}
 }

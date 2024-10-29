@@ -34,6 +34,6 @@ public class Exercise5 {
 		
 		System.out.println(hourFinal < 10 ?  "0" + hourFinal +  ":" + minutesFinal + hourFinal : hourFinal+ ":" + minutesFinal);
 		
-	}
+		sc.close();	}
 
 }
