@@ -1,11 +1,11 @@
 package bolentinjames;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Exercise6 {
 
 	public static void main(String[] args) {
-
+/*
 		Scanner sc = new Scanner(System.in);
 
 		int moneyToPay;
@@ -81,6 +81,6 @@ public class Exercise6 {
 		// céntimos" + tenCents + "monedas de 10 céntimos" + fiveCents + "monedas");
 
 		sc.close();
-
+*/
 	}
 }

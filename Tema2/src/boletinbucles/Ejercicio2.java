@@ -6,6 +6,12 @@ import java.util.Scanner;
  * Este programa solicita un número y nos muestra cuantos primos hay entre 1 y
  * el número introducido.
  */
+
+//PRUEBAS
+//ENTRADA: 0 || RESULTADO ESPERADO: "El número introducido es menor que 1" || RESULTADO OBTENIDO: "El número introducido es menor que 1"
+//ENTRADA: 1 || RESULTADO ESPERADO: 0 || RESULTADO OBTENIDO: 0
+//ENTRADA: 7 || RESULTADO ESPERADO: 4 || RESULTADO OBTENIDO: 4
+//ENTRADA: 80 || RESULTADO ESPERADO: 22 || RESULTADO OBTENIDO: 22
 public class Ejercicio2 {
 
 	public static void main(String[] args) {
@@ -28,6 +34,12 @@ public class Ejercicio2 {
 		// Le pedimos al usuario que introduzca un número y lo leemos
 		System.out.print("Introduce un número --> ");
 		num = sc.nextInt();
+
+		while (num < 1) {
+			System.out.println("El número introducido es menor que 1");
+			System.out.print("Introduce un número --> ");
+			num = sc.nextInt();
+		}
 
 		// Comprobamos que si el número es igual a 1, si es así decimos que sea false
 		// directamente.
