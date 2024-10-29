@@ -12,10 +12,10 @@ import java.util.Scanner;
 //PRUEBAS
 //ENTRADA: -1 || RESULTADO ESPERADO: "El número introducido es negativo" || RESULTADO OBTENIDO: "El número introducido es negativo"
 //ENTRADA: "abcd" || RESULTADO ESPERADO: "Dime un número: " || RESULTADO OBTENIDO: "El valor introducido es erroneo"
-//ENTRADA: 4, 9, 9, 10, 0 || RESULTADO ESPERADO: "Total de números introducidos: 4 " || RESULTADO OBTENIDO: "Total de números introducidos: 4 "	
-//												 "Números fallados: 0 "										"Números fallados: 0 "
-//ENTRADA: 5, 9, 7, 10, 9, 0 || RESULTADO ESPERADO: "Total de números introducidos: 5 " || RESULTADO OBTENIDO: "Total de números introducidos: 5 "	
-//												    "Números fallados: 2 "                                     "Números fallados: 2 "
+//ENTRADA: 4, 9, 9, 10, 0 || RESULTADO ESPERADO: "Total de números introducidos: " 4 || RESULTADO OBTENIDO: "Total de números introducidos: " 4	
+//												 "Números fallados: " 0									"Números fallados: " 0
+//ENTRADA: 5, 9, 7, 10, 9, 0 || RESULTADO ESPERADO: "Total de números introducidos: " 5 || RESULTADO OBTENIDO: "Total de números introducidos: " 5
+//												    "Números fallados: " 2                                     "Números fallados: " 2
 
 public class Ejercicio8 {
 
