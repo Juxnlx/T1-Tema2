@@ -14,6 +14,7 @@ import java.util.Scanner;
 //ENTRADA: 08:09:05 +55 || RESULTADO ESPERADO: 08:10:00 || RESULTADO OBTENIDO: 08:10:00
 //ENTRADA: 08:59:05 +55 || RESULTADO ESPERADO: 09:00:00 || RESULTADO OBTENIDO: 23:01:00
 //ENTRADA: 23:59:05 +55 || RESULTADO ESPERADO: 00:00:00 || RESULTADO OBTENIDO: 00:00:00
+//ENTRADA: 13:59:51 +10 || RESULTADO ESPERADO: 14:00:01 || RESULTADO OBTENIDO: 14:00:01
 
 public class Ejercicio1 {
 
@@ -81,6 +82,14 @@ public class Ejercicio1 {
 		// Le pedimos al usuario la cantidad de segundos que desea incrementar.
 		System.out.print("Introduce los segundos que deseas incrementar --> ");
 		cantSeg = sc.nextInt();
+
+		// Comprobamos si el valor introducido es erroneo, si es así mostramos un
+		// mensaje de error y volvemos a pedir los segundos a incrementar.
+		while (cantSeg < 0) {
+			System.out.println("Los segundos a incrementar son erroneos.");
+			System.out.print("Introduce los segundos que deseas incrementar --> ");
+			cantSeg = sc.nextInt();
+		}
 
 		// Con este for comprobamos que en cada interación se vaya introduciendo un
 		// segundos. Va ver tantas interacciones como incrementos de segundos hayamos
