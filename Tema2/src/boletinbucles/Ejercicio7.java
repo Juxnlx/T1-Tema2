@@ -8,15 +8,23 @@ import java.util.Scanner;
  * de dicha altura y nos imprime los números hasta el introducido y de forma
  * decreciente en la misma linea.
  */
+
+//PRUEBAS
+//ENTRADA: 0 || RESULTADO ESPERADO: "El número introducido es menor que uno" || RESULTADO OBTENIDO: "El número introducido es menor que uno"
+//ENTRADA: 4 || RESULTADO ESPERADO: 1 || RESULTADO OBTENIDO: 1
+//									121						 121
+//									12321					 12321
+//									1234321 				 1234321
+//ENTRADA: "abcd" || RESULTADO ESPERADO: "El valor introducido es erroneo" || RESULTADO OBTENIDO: "El valor introducido es erroneo"
 public class Ejercicio7 {
 
 	public static void main(String[] args) {
 		// Creamos la variable num como int para almacenar la altura de la piramide.
-		int num = 0;
+		int num = 1;
 
 		// Creamos la variable exception como boolean para almacenar true o false,
 		// dependiendo de si el valor de entrada es verdadero o falso.
-		boolean exception = false;
+		boolean exception;
 
 		// Creamos el Scanner para leer el número introducido por el usuario.
 		Scanner sc = new Scanner(System.in);
@@ -24,7 +32,7 @@ public class Ejercicio7 {
 		// Creamos un bucle do-while para volver a preguntar el número hasta introducir
 		// un valor correcto.
 		do {
-			
+
 			// Creamos nuestro bloque try con las instrucciones sensibles a algun tipo de
 			// excepción, en nuestro caso con el número de valor de entrada.
 			try {
@@ -35,7 +43,7 @@ public class Ejercicio7 {
 				// Creamos el assert y en caso de que sea false nos devuelve el mensaje de que
 				// el número es menor que dos y se va directamente a la exceptción especifica
 				// que le haya saltado,
-				assert (num > 0) : "El número es menor que 1";
+				assert (num > 0) : "El número introducido es menor que uno";
 
 				// Solo se ejecuta si el dato es correcto para salirnos del bucle.
 				exception = false;
