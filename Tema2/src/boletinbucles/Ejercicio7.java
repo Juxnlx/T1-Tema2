@@ -1,5 +1,6 @@
 package boletinbucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -11,14 +12,61 @@ public class Ejercicio7 {
 
 	public static void main(String[] args) {
 		// Creamos la variable num como int para almacenar la altura de la piramide.
-		int num;
+		int num = 0;
+
+		// Creamos la variable exception como boolean para almacenar true o false,
+		// dependiendo de si el valor de entrada es verdadero o falso.
+		boolean exception = false;
 
 		// Creamos el Scanner para leer el número introducido por el usuario.
 		Scanner sc = new Scanner(System.in);
 
-		// Le pedimos al usuario que introduzca un número y lo leemos por teclado
-		System.out.print("Introduce un número --> ");
-		num = sc.nextInt();
+		// Creamos un bucle do-while para volver a preguntar el número hasta introducir
+		// un valor correcto.
+		do {
+			
+			// Creamos nuestro bloque try con las instrucciones sensibles a algun tipo de
+			// excepción, en nuestro caso con el número de valor de entrada.
+			try {
+				// Le pedimos al usuario que introduzca un número por teclado y lo leemos.
+				System.out.print("Introduce un número --> ");
+				num = sc.nextInt();
+
+				// Creamos el assert y en caso de que sea false nos devuelve el mensaje de que
+				// el número es menor que dos y se va directamente a la exceptción especifica
+				// que le haya saltado,
+				assert (num > 0) : "El número es menor que 1";
+
+				// Solo se ejecuta si el dato es correcto para salirnos del bucle.
+				exception = false;
+
+				// Este catch captura las excepciones si nosotros introducimos un valor númerico
+				// menor que dos.
+			} catch (AssertionError e) {
+				// Imprimimos el mensaje del assert.
+				System.out.println(e.getMessage());
+
+				// Ponemos la exception a true para volver a preguntar el número.
+				exception = true;
+
+				// Este catch captura las excepciones si nosotros introducimos una cadena.
+			} catch (InputMismatchException e) {
+				System.out.println("El valor introducido es erroneo");
+
+				// Ponemos la exception a true para volver a preguntar el número.
+				exception = true;
+
+				// Creamos el bloque finally para que siempre se ejecute independientemente de
+				// si salta una excepción o no.
+			} finally {
+
+				// Limpiamos el buffer.
+				sc.nextLine();
+			}
+
+			// Comprobamos si la exception es false o true para volver a preguntar el número
+			// o no
+		} while (exception);
 
 		// Este for hace que las número de filas sean las introducidas por el usuario.
 		for (int i = 1; i <= num; i++) {
@@ -41,7 +89,7 @@ public class Ejercicio7 {
 			System.out.println();
 		}
 
-		//Cierre de Scanner
+		// Cierre de Scanner
 		sc.close();
 	}
 
