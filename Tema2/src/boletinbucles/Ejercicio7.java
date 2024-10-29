@@ -41,7 +41,7 @@ public class Ejercicio7 {
 				num = sc.nextInt();
 
 				// Creamos el assert y en caso de que sea false nos devuelve el mensaje de que
-				// el número es menor que dos y se va directamente a la exceptción especifica
+				// el número es menor que uno y se va directamente a la exceptción especifica
 				// que le haya saltado,
 				assert (num > 0) : "El número introducido es menor que uno";
 
