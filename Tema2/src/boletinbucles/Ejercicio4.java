@@ -6,6 +6,12 @@ import java.util.Scanner;
  * Este programa calcula el mínimo comun divisor solicitando al usuario dos
  * números por teclado. Y finalmente muestra el m.c.m de los dos números.
  */
+
+//PRUEBAS
+//ENTRADA: 1, 1 || RESULTADO ESPERADO: "El número introducido es menor que 2" || RESULTADO OBTENIDO: "El número introducido es menor que 2"
+//ENTRADA: 12, 8 || RESULTADO ESPERADO: 2 || RESULTADO OBTENIDO: 2
+//ENTRADA: 9, 15 || RESULTADO ESPERADO: 3 || RESULTADO OBTENIDO: 3
+//ENTRADA: 20, 25 || RESULTADO ESPERADO: 5 || RESULTADO OBTENIDO: 5
 public class Ejercicio4 {
 
 	public static void main(String[] args) {
@@ -29,9 +35,21 @@ public class Ejercicio4 {
 		System.out.print("Introduce el primer número --> ");
 		num1 = sc.nextInt();
 
+		while (num1 < 2) {
+			System.out.println("El número introducido es menor que 2");
+			System.out.print("Introduce el primer número --> ");
+			num1 = sc.nextInt();
+		}
+
 		// Le pedimos al usuario que introduzca el segundo número y lo leemos.
 		System.out.print("Introduce el segundo número --> ");
 		num2 = sc.nextInt();
+
+		while (num2 < 2) {
+			System.out.println("El número introducido es menor que 2");
+			System.out.print("Introduce el segundo número --> ");
+			num2 = sc.nextInt();
+		}
 
 		// Comprobamos si el numero 1 es mayor o igual que el número 2, si es así el
 		// número mayor es el número 1.
