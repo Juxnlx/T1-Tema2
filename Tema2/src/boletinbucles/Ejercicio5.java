@@ -7,6 +7,16 @@ import java.util.Scanner;
  * número desde el 1 hasta el número tantas veces como la cantidad de cada
  * número que se va imprimiendo.
  */
+
+//PRUEBAS
+//ENTRADA: 21 || RESULTADO ESPERADO: "El número introducido no es valido" || RESULTADO OBTENIDO: "El número introducido no es valido"
+//ENTRADA: 4 || RESULTADO ESPERADO: 1 || RESULTADO OBTENIDO: 1
+//									22                       22
+//									333                      333
+//									4444                     4444
+//ENTRADA: 1 || RESULTADO ESPERADO: 1 || RESULTADO OBTENIDO: 1
+
+
 public class Ejercicio5 {
 
 	public static void main(String[] args) {
@@ -17,13 +27,17 @@ public class Ejercicio5 {
 		// Creamos el Scanner para leer ese número por teclado.
 		Scanner sc = new Scanner(System.in);
 
-		// Creamos un bucle do-while con la condición de que si un número es menor que 1
-		// o mayor que 20, vuelva a preguntar de nuevo que introduzca un número.
-		do {
-			// Le pedimos al usuario que introduzca un número y lo leemos.
+		// Le pedimos al usuario que introduzca un número y lo leemos.
+		System.out.print("Introduce un número entre 0 - 20 --> ");
+		num = sc.nextInt();
+
+		// Comprobamos si el número es menor que 1 o mayor que 20, si es así volvemos a
+		// preguntar el número.
+		while (num < 1 || num > 20) {
+			System.out.println("El número introducido no es valido");
 			System.out.print("Introduce un número entre 0 - 20 --> ");
 			num = sc.nextInt();
-		} while (num < 1 || num > 20);
+		}
 
 		// Con este for comprobamos que se impriman los números desde 1 hasta el
 		// introducido por el usuario.
