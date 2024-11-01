@@ -50,26 +50,35 @@ public class Ejercicio4 {
 			// La copia del lado en cada vuelta la incrementamos en 2 para en cada iteración
 			// imprimir dos asteriscos mas.
 			copiaLado += 2;
-			
-			//Salto de linea despues de cada linea.
+
+			// Salto de linea despues de cada linea.
 			System.out.println();
 		}
 
+		// Este for recorre las mismas iteraciones como el tamaño del lado introducido
+		// menos 1. Hace una menos que el tamaño introducido porque la ultima ya la
+		// imprime el primer for este for se encarga del decremento.
 		for (int i = lado; 1 < i; i--) {
 			copiaLado -= 2;
 
+			// Este for lo igualamos a la i para que en cada iteración sea un espacio mas y
+			// recorremos hasta un tamaño antes para que no imprima un asterisco de mas.
 			for (int j = i; j <= lado; j++) {
 				System.out.print(" ");
 			}
 
+			// Este for empieza en la copia del tamaño del lado -2 y recorremos hasta 1 para
+			// imprimir tantos asteriscos. En cada iteración se resta dos mas así hasta
+			// llegar al tamaño introducido por el usuario.
 			for (int k = copiaLado - 2; k >= 1; k--) {
 				System.out.print("*");
 			}
 
+			//Salto de linea, para empezar en una linea nueva.
 			System.out.println();
 		}
-		
-		//Cierre de Scanner
+
+		// Cierre de Scanner
 		sc.close();
 
 	}
