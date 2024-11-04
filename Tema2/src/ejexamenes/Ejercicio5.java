@@ -38,6 +38,7 @@ public class Ejercicio5 {
 				if (j % 2 == 0) {
 					for (int k = 1; k <= tamEscape; k++) {
 						System.out.print("#");
+					
 					}
 
 					for (int h = 1; h <= tamEscape; h++) {

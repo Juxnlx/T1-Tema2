@@ -90,9 +90,8 @@ public class Ejercicio8 {
 			// o no
 		} while (exception);
 
-		// Creamos un bucle do-while para ejecutar siempre estas instrucciones hasta que
-		// se introduzca un 0 por teclado.
-		do {
+		
+		while (num != 0){
 
 			// Comprobamos si el número introducido es menor que el introducido
 			// anteriormente, si es así imprimimos un mensaje de error y contabilizamos +1
@@ -112,9 +111,7 @@ public class Ejercicio8 {
 			System.out.print("Dime un número: ");
 			num = sc.nextInt();
 
-			// Comprobamos si el número introducido es distinto de 0, si es así volvemos a
-			// ejecutar el bloque de instrucciones.
-		} while (num != 0);
+		}
 
 		// Imprimimos el total de números introducidos, excluyendo al 0 e imprimimos el
 		// número de fallos.
